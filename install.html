@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="theme-color" content="#00512D"/>
+<title>Install VP Due & Quote App</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:#F5FBF8;color:#0A1A10;min-height:100vh;}
+.hero{background:linear-gradient(135deg,#00512D,#006B3C);color:#fff;text-align:center;padding:48px 24px 36px;}
+.panda{font-size:68px;display:block;animation:bob 2s infinite;}
+@keyframes bob{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+h1{font-size:24px;font-weight:800;margin:12px 0 6px;}
+.sub{font-size:13px;opacity:.75;}
+.feats{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;padding:20px;background:#fff;border-bottom:1px solid #D5EBE0;}
+.feat{background:#EBF7F1;border:1px solid #C8EDD9;border-radius:20px;padding:5px 13px;font-size:12px;font-weight:600;color:#00512D;}
+.wrap{max-width:480px;margin:0 auto;padding:22px 18px;}
+.open-btn{display:block;width:100%;background:#006B3C;color:#fff;text-decoration:none;text-align:center;
+  padding:16px;border-radius:14px;font-size:17px;font-weight:800;margin-bottom:20px;
+  box-shadow:0 4px 20px rgba(0,81,45,.3);}
+.note{background:#FFF7ED;border:1px solid #FFD580;border-radius:10px;padding:11px 14px;font-size:12px;color:#7A5C00;margin-bottom:20px;}
+.section{margin-bottom:24px;}
+h2{font-size:14px;font-weight:700;color:#00512D;margin-bottom:12px;}
+ol{padding-left:16px;font-size:13px;color:#1E3D28;line-height:2.1;}
+.share-box{background:#EBF7F1;border:1px solid #C8EDD9;border-radius:14px;padding:18px;text-align:center;}
+.share-box p{font-size:13px;color:#1E3D28;margin-bottom:12px;}
+.wa-btn{background:#25D366;color:#fff;border:none;padding:13px 24px;border-radius:12px;
+  font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:700;cursor:pointer;}
+footer{text-align:center;padding:18px;font-size:11px;color:#8DB89D;border-top:1px solid #D5EBE0;margin-top:16px;}
+</style>
+</head>
+<body>
+<div class="hero">
+  <span class="panda">🐼</span>
+  <h1>VP Due & Quote App</h1>
+  <p class="sub">Due List + Quotation + WhatsApp + PDF — all in one</p>
+</div>
+<div class="feats">
+  <span class="feat">📅 IAP Schedule</span>
+  <span class="feat">✅ Due Tick List</span>
+  <span class="feat">💰 Auto Quotation</span>
+  <span class="feat">👨‍⚕️ Free Consults</span>
+  <span class="feat">📱 WhatsApp Send</span>
+  <span class="feat">📥 PDF Download</span>
+  <span class="feat">💾 Save Records</span>
+  <span class="feat">📶 Works Offline</span>
+</div>
+<div class="wrap">
+  <a href="./index.html" class="open-btn">🚀 Open VP Care App →</a>
+  <div class="note">⚠️ <strong>iPhone:</strong> open in <strong>Safari</strong> to install. &nbsp; <strong>Android:</strong> use <strong>Chrome</strong>.</div>
+  <div class="section">
+    <h2>🤖 Android — Install</h2>
+    <ol>
+      <li>Open the app above in <strong>Chrome</strong></li>
+      <li>Tap <strong>⋮ menu → Add to Home Screen</strong></li>
+      <li>Tap <strong>Add</strong> — done! 🎉</li>
+    </ol>
+  </div>
+  <div class="section">
+    <h2>🍎 iPhone — Install</h2>
+    <ol>
+      <li>Open the app above in <strong>Safari</strong></li>
+      <li>Tap the <strong>Share ↑</strong> button</li>
+      <li>Tap <strong>"Add to Home Screen"</strong></li>
+      <li>Tap <strong>Add</strong> — done! 🎉</li>
+    </ol>
+  </div>
+  <div class="share-box">
+    <p>Share this install page with your team</p>
+    <button class="wa-btn" onclick="share()">📱 Share on WhatsApp</button>
+  </div>
+</div>
+<footer>Vaccine Panda — GCPL OPC Pvt Ltd | GSTIN: 07AAHCG7509E1ZN | 9999109040</footer>
+<script>
+function share(){
+  const url=window.location.href;
+  const msg=`🐼 *VP Due & Quote App*\n\nVaccination due list + quotation + WhatsApp in one app!\n\n👉 ${url}\n\nInstall in 30 seconds 📲`;
+  if(navigator.share){navigator.share({title:'VP Care',text:msg});}
+  else{window.open(`https://wa.me/?text=${encodeURIComponent(msg)}`, '_blank');}
+}
+</script>
+</body>
+</html>
